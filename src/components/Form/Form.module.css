@@ -1,0 +1,78 @@
+.form{
+    backdrop-filter: blur(20px);
+    border:1.5px solid white;
+    display: inline-block; ; 
+    justify-content:center;
+    color:aliceblue;
+    padding:5px;
+    margin-bottom:25px;
+    width: 35%;
+    height:380px;
+    border-radius: 20px;
+}
+
+.username{
+    padding-top:10px;
+    height:100px;
+}
+
+.password{
+    height:100px;  
+}
+
+.search{
+    width: 70%;
+    border-radius: 20px;
+    border:2.5px solid #6bf032;
+    height:35px;
+    background-color: transparent;
+    color:#6bf032;
+ }
+ 
+ .search:hover{
+     backdrop-filter: blur(10px);
+     cursor:text;
+     color:white;
+ }
+
+.btnForm{
+    height:40px;
+    width:80px;
+    border:2px solid #6bf032;
+    border-radius: 20px;
+    margin-left: 10px;
+    color:black solid;
+    background-color: #6bf032;
+}
+.btnForm:hover{
+    cursor:pointer;
+    border-color: aliceblue;
+}
+
+.label{
+    display: inline-block;
+    padding:2.5px
+}
+.label:hover{
+    cursor:pointer;
+    color:#6bf032;
+}
+
+.warning {
+    width: 70%;
+    border-radius: 20px;
+    border:2.5px solid red;
+    height:35px;
+    background-color: transparent;
+    color:red;
+  }
+  
+  .danger {
+    color: red;
+    margin-left:70px;
+  }
+  
+  .image{
+    width: 80px;
+    height: 80px;
+  }

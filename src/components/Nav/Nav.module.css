@@ -1,0 +1,36 @@
+
+.container{
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.nav{
+ display: inline-flex;
+ justify-content: flex-end;
+ align-items: flex-end;
+ margin-top:5px;
+ padding-top: 5px;
+ margin-bottom: 5px;
+ padding-right: 10px;
+ 
+ }
+
+ .links li{
+  display: inline-block;
+  text-align: center;
+  padding-top: 20px;
+  margin-right: 15px;
+  padding-left: 20px;
+ }
+
+
+h5{
+    color: #fff;
+}
+
+.active{
+    color: aliceblue;
+}
+
+

@@ -1,0 +1,88 @@
+
+.divCard{
+    position: relative;
+    /* transform-style: preserve-3d; */
+    perspective: 1000px;
+    width: 300px;
+    /* height: 470px; */
+    border: 1.5px solid #E9E9E9;
+    margin:15px;
+    text-align: center;
+    border-radius: 20px;
+    display: inline-block ;  
+    background-color: black;
+    color:aliceblue;
+    
+}
+.divCard:hover{
+    color:rgb(159, 246, 129);
+    border-color:#6bf032 ;
+    cursor: pointer;
+    border:1.5px solid #6bf032;
+    border-radius:20px;
+} 
+/* .divCard:hover .delante{
+    transform: rotateY(180deg);
+    color:rgb(159, 246, 129);
+    border-color:#6bf032 ;
+    cursor: pointer;
+    border:1.5px solid #6bf032;
+    border-radius:20px;
+}
+.divCard:hover .atras{
+    transform: rotateY(360deg);
+    color:rgb(159, 246, 129);
+    border-color:#6bf032 ;
+    cursor: pointer;
+    border:1.5px solid #6bf032;
+    border-radius:20px;
+} */
+
+.btn{
+    background-color: #26f64c;    
+    float: right;
+    border-color: #6bf032;
+    border-radius: 30px;
+    margin: 8px;
+    width: 30px;
+    height: 25px;
+}
+.btn:hover{
+    background-color: rgb(251, 78, 78);
+    color:#ffffff ;
+    cursor: pointer;
+}
+
+h2{
+    font-family: letra2;
+    font-size: xx-large;
+    background-size: 90%;
+    padding: 10px;
+}
+
+img{
+ width: 220px;
+ border-radius: 10px;
+}
+
+
+.datos{
+display:flex;
+justify-content: center;
+
+}
+
+.btnFav{
+    background-color: #26f64c;    
+    float: left;
+    border-color: #6bf032;
+    border-radius: 20px;
+    margin: 8px;
+    width: 30px;
+    height: 25px;
+}
+.btnFav:hover{
+    border-color: aliceblue;
+    cursor: pointer;
+}
+

@@ -1,0 +1,48 @@
+.search{
+    width: 350px;
+    border-radius: 20px;
+    border:2.5px solid #6bf032;
+    height:40px;
+    background-color: transparent;
+    color:#6bf032;
+ }
+ 
+ .search:hover{
+     backdrop-filter: blur(10px);
+     cursor:text;
+     color:white;
+ }
+ 
+ .agregar{
+     height:40px;
+     width:80px;
+     border:2px solid #6bf032;
+     border-radius: 20px;
+     margin-left: 10px;
+     color:black solid;
+     background-color: #6bf032;
+ }
+ 
+ .agregar:hover{
+     color:#6bf032;
+     background-color:black;
+     cursor: pointer;
+ }
+
+ .logout{
+    height:40px;
+    width:80px;
+    border:2px solid #6bf032;
+    border-radius: 20px;
+    margin-left: 10px;
+    color:black solid;
+    background-color: #6bf032;
+}
+
+.logout:hover{
+    color:white;
+    background-color:red;
+    border-color:red;
+    cursor: pointer;
+}
+ 

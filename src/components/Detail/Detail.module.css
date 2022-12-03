@@ -1,0 +1,41 @@
+.containerDetail{
+    backdrop-filter: blur(20px);
+    border:1.5px solid white;
+    display: inline flow-root list-item ; 
+    justify-content:center;
+    width:60%;
+    color:aliceblue;
+    padding:5px;
+    margin-bottom:25px;
+}
+
+.datos{
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.datosDetail{
+padding-bottom: 25px;
+margin-right: 35px;
+}
+
+.imagen{
+
+
+
+}
+.btn{
+    height:40px;
+    width:80px;
+    border:2px solid #6bf032;
+    border-radius: 20px;
+    margin-left: 10px;
+    color:black solid;
+    background-color: #6bf032;
+}
+.btn:hover{
+    cursor:pointer;
+    border-color: aliceblue
+}
+

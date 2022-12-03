@@ -1,0 +1,12 @@
+.App {
+   text-align: center;
+}
+
+.divCard {
+   display: flex;
+   justify-content: center;
+ }
+
+ /* .navi{
+   backdrop-filter: blur(10px);
+ } */

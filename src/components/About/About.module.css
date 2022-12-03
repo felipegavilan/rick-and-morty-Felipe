@@ -1,0 +1,22 @@
+.container{
+    backdrop-filter: blur(20px);
+    border:1.5px solid white;
+    display: inline-block ; 
+    justify-content:center;
+    width:78%;
+    height:100%;
+    color:aliceblue;
+    padding:5px;
+    margin-bottom:25px;
+}
+
+.creador{
+    padding:8px;
+    margin: 5;
+}
+
+
+a{
+    color:#6bf032;
+    text-decoration: none;
+}
