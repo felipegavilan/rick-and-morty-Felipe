@@ -6,10 +6,10 @@ export default function Cards(props) {
    return (
    <div className={s.cards}>
       {
-            characters.map((m, i) => (
+            characters.map((m) => (
             <Card 
-            detailId = {m.id}
-            key={i}
+            id = {m.id}
+            key={m.id}
             name = {m.name}
             species = {m.species}
             gender = {m.gender}

@@ -18,6 +18,6 @@ export default function rootReducer(state = initialState, {type, payload}) {
                 myFavorites: filtered,
             }
         default:
-            return state
+            return {...state}
     }
 }

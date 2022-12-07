@@ -1,30 +1,34 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+// import { connect } from 'react-redux';
 import {addCard, deleteCard} from '../../redux/actions/actions';
 import s from '../Card/Card.module.css';
 
-export function Card(props) {
+export default function Card(props) {
+   // const {addCard, deleteCard} = props;
+   const myFavorites = useSelector(state=> state.myFavorites);
+   const dispatch = useDispatch();
    const [isFav, setIsFav] = useState(false);
-   function handleFavorite(){
+  function handleFavorite(){
       if(isFav){
          setIsFav(false);
-         props.deleteCard(props.detailId)
+         dispatch(deleteCard(props.id))
       } else{
          setIsFav(true);
-         props.addCard(props)
+         dispatch(addCard(props))
       }
    }
 
    useEffect(() => {
-      props.myFavorites?.forEach((fav) => {
-         if (fav.id === props.detailId) {
+      myFavorites?.forEach((fav) => {
+         if (fav.id === props.id) {
             setIsFav(true);
          }
       });
    // eslint-disable-next-line no-undef
-   }, [props.myFavorites]);
+   }, [myFavorites]);
 
    return (
       
@@ -38,9 +42,12 @@ export function Card(props) {
             }    
             <button onClick={props.onClose} className={s.btn}>X</button>
                <div className={s.nombre}>
-                  <Link to={`/detail/${props.detailId}`}>
-                     <h2>{props.name}</h2>
-                  <img src={props.image} alt="icon" />
+                  <Link to={`/detail/${props.id}`}>  
+                       
+                     <h2 >{props.name}</h2>   
+                       
+                     <img src={props.image} alt="icon" />
+                    
                   </Link>
                   <div className={s.datos}>
                      <h2>{props.species}</h2>
@@ -52,20 +59,20 @@ export function Card(props) {
    );
 }
 
-export function mapDispatchToProps(dispatch){
-   return{
-   addCard: (personaje) =>{
-      dispatch(addCard(personaje))},
-   deleteCard:(id) =>{
-      dispatch(deleteCard(id))
-   }
-   }
-}
+// export function mapDispatchToProps(dispatch){
+//    return{
+//    addCard: (personaje) =>{
+//       dispatch(addCard(personaje))},
+//    deleteCard:function(id){
+//       dispatch(deleteCard(id))
+//    }
+//    }
+// }
 
-export function mapStateToProps(state){
-   return ({ 
-      myFavorites: state.myFavorites,
-   })
-}
+// export function mapStateToProps(state){
+//    return ({ 
+//       myFavorites: state.myFavorites,
+//    })
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Card);
+// export default connect(mapStateToProps, null)(Card);

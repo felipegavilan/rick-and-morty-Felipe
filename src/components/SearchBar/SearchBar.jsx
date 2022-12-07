@@ -16,19 +16,19 @@ export default function SearchBar(props) {
          <input 
             type='search' 
             className={style.search} 
-            placeholder="Escribe aquí..." 
+            placeholder="Enter id..." 
             onChange={handleChange}
             />
          <button 
             className={style.agregar} 
             onClick={() => props.onSearch(userInput)}>
-            Agregar
+            ADD
          </button>
          <button 
             className={style.agregar} 
             onClick={props.random}
             >
-            Random
+            RANDOM
          </button>
          <button 
          className={style.logout} 

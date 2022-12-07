@@ -37,17 +37,18 @@ export default function App () {
    // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [access]);
 
-  function onSearch(character) {
+  function onSearch(character) { 
+
+      fetch(`https://rickandmortyapi.com/api/character/${character}`)
+      .then((response) => response.json())
+      .then((data) => {
+         if (data.name) {
+            setCharacters((oldChars) => [...oldChars, data]);
+         } else {
+            window.alert('No hay personajes con ese ID');
+         }
+      });
    
-    fetch(`https://rickandmortyapi.com/api/character/${character}`)
-       .then((response) => response.json())
-       .then((data) => {
-          if (data.name) {
-             setCharacters((oldChars) => [...oldChars, data]);
-          } else {
-             window.alert('No hay personajes con ese ID');
-          }
-       });
      
  }
 

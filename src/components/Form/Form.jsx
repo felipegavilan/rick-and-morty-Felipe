@@ -38,7 +38,7 @@ export default function Form({login}){
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div className={s.username}>
-                        <label className={s.label} htmlFor='username'>Username:</label>
+                        <label className={s.label} htmlFor='username'>USERNAME:</label>
                         <input
                         id='username'
                         name='username'
@@ -51,7 +51,7 @@ export default function Form({login}){
                         <p className={s.danger}>{errors.username}</p>
                     </div>
                     <div className={s.password}>
-                        <label className={s.label} htmlFor="password">Password:</label>
+                        <label className={s.label} htmlFor="password">PASSWORD:</label>
                         <input
                         id='password'
                         name='password'

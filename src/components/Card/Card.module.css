@@ -4,7 +4,7 @@
     /* transform-style: preserve-3d; */
     perspective: 1000px;
     width: 300px;
-    /* height: 470px; */
+    height: 480px;
     border: 1.5px solid #E9E9E9;
     margin:15px;
     text-align: center;
@@ -69,7 +69,7 @@ img{
 .datos{
 display:flex;
 justify-content: center;
-
+padding: 15px;
 }
 
 .btnFav{
@@ -85,4 +85,18 @@ justify-content: center;
     border-color: aliceblue;
     cursor: pointer;
 }
+
+.nombre {    
+    margin-top: 5px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+.styleh2{
+   
+}
+
 

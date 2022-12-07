@@ -6,7 +6,7 @@ export default function About (){
             <div className={style.container}>
                 <h2 style={{color: 'white'}}>Información</h2>
                 <div className={style.info}>
-                    <p>
+                    <p style={{fontSize:'large'}}>
                         Esta aplicación tiene como funcionalidad buscar, agregar y presentar personajes de la serie animada Rick and Morty con sus respectivas caracteristicas. 
                         El objetivo principal de este proyecto es la puesta en práctica de lo aprendido en el desarrollo del Módulo II de <a href="https://www.soyhenry.com/?utm_source=google&utm_medium=cpc&utm_campaign=GADS_SEARCH_ARG_BRAND&utm_content=brand&gclid=Cj0KCQiAj4ecBhD3ARIsAM4Q_jFc1s-0jVvs-THv8KQGDYnL4vpg3nTCmZUQV_uxPd7gWYJbapNCbQcaArKWEALw_wcB">soyHenry</a>.
                     </p>

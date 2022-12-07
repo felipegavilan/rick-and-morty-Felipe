@@ -18,18 +18,19 @@
 .datosDetail{
 padding-bottom: 25px;
 margin-right: 35px;
+text-align:center;
 }
 
 .imagen{
-
-
-
+    margin: 20px;
+    padding: 10px
 }
 .btn{
     height:40px;
     width:80px;
     border:2px solid #6bf032;
     border-radius: 20px;
+    margin-top: 10px;
     margin-left: 10px;
     color:black solid;
     background-color: #6bf032;
