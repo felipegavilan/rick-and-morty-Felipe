@@ -15,7 +15,7 @@ export default function App () {
   const location = useLocation();
   const navigate = useNavigate();
   const [access, setAccess] = useState(false)
-  const username = 'felipe@gmail.com'
+  const username = 'felipe@henry.com'
   const password = 'felipe1'
 
   function login(userData) {
@@ -38,7 +38,9 @@ export default function App () {
    }, [access]);
 
   function onSearch(character) { 
-
+   // eslint-disable-next-line eqeqeq
+   let filter = characters.filter(el=> el.id + '' == character + '')
+   if(filter.length === 0){
       fetch(`https://rickandmortyapi.com/api/character/${character}`)
       .then((response) => response.json())
       .then((data) => {
@@ -48,6 +50,10 @@ export default function App () {
             window.alert('No hay personajes con ese ID');
          }
       });
+   } else{
+      alert('Ya se encuentra el personaje')
+   }
+      
    
      
  }
@@ -77,7 +83,7 @@ export default function App () {
       <div className='App'>
          {location.pathname !== '/'?<Nav onSearch={onSearch} logout={logout} random={random}/>:null}
         <div className="divTittle">
-          <img src={tittle} style={{width: '35%'}} alt='tittle' />
+        {location.pathname !== '/favorites'? <img src={tittle} style={{width: '35%'}} alt='tittle' /> : null}  
         </div> 
          <Routes>
             <Route path="/" element={<Form login={login}/>}/>

@@ -1,27 +1,53 @@
 // import { connect } from 'react-redux'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { filterCards, orderCard } from '../../redux/actions/actions';
 import Card from '../Card/Card'
+import style from './Favorites.module.css'
 
 
 export default function Favorites(){
     const myFavorites = useSelector(state => state.myFavorites)
+    const dispatch = useDispatch();
+
+    const handleClick = (e) =>{
+        const {name, value} = e.target
+        
+        switch (name){
+            case 'order':
+                return dispatch(orderCard(value))
+            case 'filter':
+                return dispatch(filterCards(value))
+            default: return null;
+        }
+    }
 
     return (<div>
-        
-        {myFavorites.map((char) => (
-            <Card
-            id = {char.id}
-            key={char.id}
-            name = {char.name}
-            species = {char.species}
-            gender = {char.gender}
-            image = {char.image}
-            status = {char.status}   
-            />
-            ))}
-           
-        
-        </div>
+                <div className={style.selector}>
+                    <select name='order' onChange={handleClick}>
+                        <option value="Ascendente">Ascendente</option>
+                        <option value="Descendente">Descendente</option>
+                    </select>     
+                    <select name='filter' onChange={handleClick}>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Genderless">Genderless</option>
+                        <option value="unknown">unknown</option>
+                    </select>
+                </div>
+                {myFavorites.map((char) => (
+                    <Card
+                    id = {char.id}
+                    key={char.id}
+                    name = {char.name}
+                    species = {char.species}
+                    gender = {char.gender}
+                    image = {char.image}
+                    status = {char.status}   
+                    />
+                    ))}
+                
+            
+            </div>
     )
 }
 
